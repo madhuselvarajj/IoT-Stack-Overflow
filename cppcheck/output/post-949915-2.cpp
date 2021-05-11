@@ -1,4 +1,6 @@
-void initialize(void) {
-    // weave your magic here.
+#include <stdio.h>
+int main (void) {
+    initialize();
+    int x = 1;
+    return 0;
 }
-#include "preinit.h"

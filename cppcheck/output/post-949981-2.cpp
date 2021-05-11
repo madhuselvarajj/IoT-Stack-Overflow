@@ -1,1 +1,0 @@
-RUN_EARLY(initialize())
