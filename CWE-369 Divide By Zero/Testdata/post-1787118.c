@@ -7,21 +7,21 @@ void formatTimeDigits(char strOut[3], int num)
 
 void serialOutput12()
 {
-  char strOut[3]; 
+  char strOut[3]; // the allocation is in this stack frame, not formatTimeDigits
 
-  printWeekday(weekday); 
+  printWeekday(weekday); // picks the right word to print for the weekday
 
-  Serial.print(", "); 
+  Serial.print(", "); // a comma after the weekday
 
-  Serial.print(hour12, DEC); 
+  Serial.print(hour12, DEC); // the hour, sent to the screen in decimal format
 
-  Serial.print(":"); 
+  Serial.print(":"); // a colon between the hour and the minute
 
   formatTimeDigits(strOut, minute);
-  Serial.print(strOut); 
+  Serial.print(strOut); // the minute
 
-  Serial.print(":"); 
+  Serial.print(":"); // a colon between the minute and the second
 
   formatTimeDigits(strOut, second);
-  Serial.print(strOut); 
+  Serial.print(strOut); // the second
 }
